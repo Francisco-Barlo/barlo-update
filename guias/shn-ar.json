@@ -2,7 +2,7 @@
   "id": "shn-ar",
   "nombre": "SHN · Argentina",
   "proveedor": "Servicio de Hidrografía Naval",
-  "version": 1,
+  "version": 2,
   "cita": "Datos: Servicio de Hidrografía Naval (hidro.gov.ar, Datos Abiertos).",
   "vinculo": "https://www.hidro.gov.ar/DA/DatosAbiertos.asp",
   "utcMin": -180,
@@ -54,5 +54,24 @@
     "codificacion": ["utf-8", "windows-1252"],
     "encabezado": "RIO DE LA PLATA - (\\d+)-(\\d{4}) - (\\d{2}/\\d{2}/\\d{4})",
     "excluir": ["PRONOSTICO MAREOLOGICO", "PRONOSTICO DE OLAS"]
+  },
+  "corrientes": {
+    "formulario": "https://www.hidro.gov.ar/oceanografia/Tmareas/Form_Tcorrientes.asp",
+    "url": "https://www.hidro.gov.ar/oceanografia/Tmareas/RE_corrientes.asp",
+    "pedido": "CSRFToken={token}&LocalidadC={codigo}&mes={mes2}&anio={anio}",
+    "codificacion": ["utf-8", "windows-1252"],
+    "token":"name=\"CSRFToken\" value=\"([^\"]+)\"",
+    "posicion": "LATITUD:\\s*(\\d+)\\D+([\\d.]+)'\\s*([NS])\\s*LONGITUD:\\s*(\\d+)\\D+([\\d.]+)'\\s*([EW])",
+    "puntos": [
+      {"nombre": "Palermo", "codigo": "PALE"},
+      {"nombre": "Playa Honda", "codigo": "HOND"},
+      {"nombre": "Toma Bernal", "codigo": "BERN"},
+      {"nombre": "Torre Norden", "codigo": "NORD"},
+      {"nombre": "Canal de la Magdalena", "codigo": "MAGD"},
+      {"nombre": "Quebrada del Banco Ortiz", "codigo": "ORTI"},
+      {"nombre": "Canal Intermedio", "codigo": "INTE"},
+      {"nombre": "Canal del Norte", "codigo": "NORT"},
+      {"nombre": "Boca Río de la Plata", "codigo": "RIOP"}
+    ]
   }
 }

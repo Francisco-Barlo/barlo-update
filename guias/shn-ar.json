@@ -1,0 +1,58 @@
+{
+  "id": "shn-ar",
+  "nombre": "SHN · Argentina",
+  "proveedor": "Servicio de Hidrografía Naval",
+  "version": 1,
+  "cita": "Datos: Servicio de Hidrografía Naval (hidro.gov.ar, Datos Abiertos).",
+  "vinculo": "https://www.hidro.gov.ar/DA/DatosAbiertos.asp",
+  "utcMin": -180,
+  "estaciones": [
+    {"nombre": "San Fernando", "codigo": "SANF", "enPronostico": ["SAN FERNANDO"], "zona": "interior"},
+    {"nombre": "Buenos Aires", "codigo": "BSAS", "enPronostico": ["BUENOS AIRES"], "zona": "interior"},
+    {"nombre": "La Plata", "codigo": "LPLA", "enPronostico": ["LA PLATA"], "noEnPronostico": ["RIO DE LA PLATA"], "zona": "interior"},
+    {"nombre": "Martín García", "codigo": "MAGA", "enPronostico": ["MARTIN GARCIA"], "zona": "interior"},
+    {"nombre": "Oyarvide", "codigo": "OYAR", "enPronostico": ["OYARVIDE"], "zona": "exterior", "cita": "DNVN"},
+    {"nombre": "Pilote Norden", "codigo": "NORD", "cita": "CARP"},
+    {"nombre": "Atalaya", "codigo": "ATAL"},
+    {"nombre": "San Clemente", "codigo": "SCLE"},
+    {"nombre": "Mar del Plata", "codigo": "MARD"},
+    {"nombre": "Puerto Belgrano", "codigo": "BELG"},
+    {"nombre": "Ushuaia", "codigo": "USHU"}
+  ],
+  "paraElegir": ["San Fernando", "Buenos Aires", "Martín García", "Pilote Norden", "La Plata"],
+  "alturas": {
+    "url": "https://www.hidro.gov.ar/oceanografia/AlturasHorarias.asp?export=csv",
+    "codificacion": ["windows-1252"],
+    "separador": ";",
+    "fecha": "^(\\d{2})/(\\d{2})/(\\d{4}) (\\d{2}):(\\d{2})$",
+    "grupos": ["dia", "mes", "anio", "hora", "min"],
+    "sinDato": ["S/D", "F/S"]
+  },
+  "tabla": {
+    "url": "https://www.hidro.gov.ar/Oceanografia/Tmareas/RE_TablasDeMarea.asp",
+    "formulario": "FAnio={anio}&Localidad={codigo}&FMes={mes2}&B1=",
+    "codificacion": ["utf-8"],
+    "renglon": "<tr>\\s*<td[^>]*>\\s*(\\d{1,2})?\\s*</td>\\s*<td[^>]*>\\s*(\\d{1,2}):(\\d{2})\\s*</td>\\s*<td[^>]*>\\s*(\\d+[.,]\\d+)\\s*</td>"
+  },
+  "pronostico": {
+    "url": "https://www.hidro.gov.ar/Oceanografia/Pronostico.asp",
+    "codificacion": ["utf-8", "windows-1252"],
+    "validez": "VALIDO DESDE LAS\\s*(\\d{1,2}:\\d{2})\\s*HS\\s*DE\\s*(\\d{2}/\\d{2}/\\d{4})\\s*HASTA LAS\\s*(\\d{1,2}:\\d{2})\\s*HS\\s*DE\\s*(\\d{2}/\\d{2}/\\d{4})",
+    "pleamar": "PLEAMAR",
+    "bajamar": "BAJAMAR",
+    "hora": 1,
+    "altura": 2,
+    "fecha": 3,
+    "zonas": [
+      {"id": "interior", "desde": "RIO DE LA PLATA INTERIOR", "hasta": ["LUGAR", "RIO DE LA PLATA EXTERIOR"]},
+      {"id": "exterior", "desde": "RIO DE LA PLATA EXTERIOR", "hasta": ["LUGAR", "CONTACTO"]}
+    ]
+  },
+  "radioavisos": {
+    "url": "https://www.hidro.gov.ar/nautica/RadioavisosNauticos.asp?op=10",
+    "zona": "Río de la Plata",
+    "codificacion": ["utf-8", "windows-1252"],
+    "encabezado": "RIO DE LA PLATA - (\\d+)-(\\d{4}) - (\\d{2}/\\d{2}/\\d{4})",
+    "excluir": ["PRONOSTICO MAREOLOGICO", "PRONOSTICO DE OLAS"]
+  }
+}

@@ -4,7 +4,7 @@
     {
       "tipo": "CORE",
       "version": "1.36.1",
-      "archivo": "https://raw.githubusercontent.com/Francisco-Barlo/barlo-programas/main/programas/core-1.36.1.bin",
+      "archivo": "https://raw.githubusercontent.com/Francisco-Barlo/barlo-update/main/programas/core-1.36.1.bin",
       "bytes": 1532688,
       "sha256": "c42eb8c389916238d22af2c38a0cdee4f44667e516c7665b373f3cd90091f741",
       "firma": "MEUCICfj1bzfviwAQmPwIGhl0FWzjf3yot9YKp6FeJZycK0MAiEA27TBeRSLQhRg8w9IGsR74W95I4gUm5+ZteElBHz3SCg=",
@@ -15,7 +15,7 @@
     {
       "tipo": "PANT",
       "version": "1.29.0",
-      "archivo": "https://raw.githubusercontent.com/Francisco-Barlo/barlo-programas/main/programas/pant-1.29.0.bin",
+      "archivo": "https://raw.githubusercontent.com/Francisco-Barlo/barlo-update/main/programas/pant-1.29.0.bin",
       "bytes": 1352272,
       "sha256": "77a672d2fff8b215737e0c6ae1b4ef935bcc60fcf320fabfa5348c243ac76368",
       "firma": "MEYCIQCaiGKCampbM5DCnoMwka9lfGlanM9IIJVe9GalZYP08wIhAOyFM1HSdmX+SCuo6ThiBtOqBFv7NbPNLalEadsBUin5",
@@ -24,5 +24,18 @@
       "notas": "Sacada de mis equipos queda afuera y espera sola con su código"
     }
   ],
-  "fecha": "2026-11-07T10:38:53Z"
+  "fecha": "2026-11-21T02:36:05Z",
+  "guias": [
+    {
+      "id": "shn-ar",
+      "version": 1,
+      "nombre": "SHN · Argentina",
+      "archivo": "https://raw.githubusercontent.com/Francisco-Barlo/barlo-update/main/guias/shn-ar.json",
+      "bytes": 2880,
+      "sha256": "2692fd49d4a10e40c1f979d0335036ce02c14cc920b191a4cf5ae62d9f16f271",
+      "firma": "MEUCIFFK70t15V6R4M0E3FBee0+wM0yKFok8njSlE3KS8gHgAiEAqYGOoRbmq1t5UqxWJNrpulNxSXZjyCVCW8xPGcS2myg=",
+      "notas": "La guía del SHN"
+    }
+  ],
+  "mudanza": "https://raw.githubusercontent.com/Francisco-Barlo/barlo-update/main/ficha.json"
 }

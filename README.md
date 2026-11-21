@@ -1,11 +1,17 @@
-# Barlo · programas de los equipos
+# Barlo · update
 
-Los programas compilados de los equipos Barlo (central, pantalla y los que vengan), **firmados por Barlo**, y la **ficha** que dice cuál es el último de cada uno y con qué va.
+Lo que la app Barlo baja de internet para mantenerse al día, **firmado por Barlo**:
 
-La app Barlo lee `ficha.json` cuando el teléfono tiene internet, baja lo nuevo y, a bordo, el dueño decide si actualiza. **Cada equipo revisa la firma antes de grabar**: un programa que no esté firmado por Barlo, o al que le cambiaron un solo byte, no se instala.
+- los **programas** compilados de los equipos Barlo (central, pantalla y los que vengan);
+- las **guías** de las fuentes de datos: dónde publica cada proveedor (por ejemplo, el Servicio de Hidrografía Naval) y cómo leerlo. **Acá no hay datos**: cada teléfono los baja directo del proveedor.
 
-- `ficha.json` — los programas publicados (tipo, versión, archivo, suma SHA-256, firma, notas).
+La app lee `ficha.json` cuando el teléfono tiene internet y baja lo nuevo. **Todo se revisa contra la firma de Barlo**: un programa o una guía que no estén firmados, o a los que les cambiaron un solo byte, no se usan. Cada equipo, además, revisa la firma de su programa antes de grabarlo.
+
+- `ficha.json` — lo publicado: los programas (tipo, versión, archivo, suma SHA-256, firma, notas) y las guías (id, versión, archivo, suma, firma).
 - `ficha.json.firma` — la firma de la ficha entera.
 - `programas/` — los `.bin`.
+- `guias/` — las guías (`.json`).
 
-Se publica con `herramientas/firma/firmar.py` (en el repositorio del firmware, privado). El código fuente no está acá.
+Se publica con `herramientas/firma/firmar.py` (en el repositorio del firmware, privado): `firmar.py <programa.bin>` o `firmar.py --guia <guia.json>`. El código fuente no está acá.
+
+(Antes se llamaba `barlo-programas`.)

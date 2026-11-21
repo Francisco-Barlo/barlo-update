@@ -1,0 +1,20 @@
+{
+  "tipo": "meteo",
+  "id": "inumet-uy",
+  "nombre": "INUMET · Uruguay",
+  "proveedor": "Instituto Uruguayo de Meteorología",
+  "version": 1,
+  "cita": "Pronóstico: Instituto Uruguayo de Meteorología (INUMET), pronóstico marino (modelo GFS).",
+  "base": "https://www.inumet.gub.uy/reportes/pronos_marino_auto/",
+  "aviso": "aviso-marino.json",
+  "zonaAviso": "RDP",
+  "corridas": [0, 6, 12, 18],
+  "horas": 72,
+  "puertos": "{corrida}/json/{corrida}_puertos.json",
+  "viento": "{corrida}/json/{corrida}_{hhh}_wind.json",
+  "medido": {
+    "url": "https://aviationweather.gov/api/data/metar?ids={ids}&format=json",
+    "cita": "Viento medido: METAR de los aeropuertos (Aviation Weather Center, NOAA/NWS).",
+    "aeropuertos": ["SADF", "SABE", "SADL", "SUCA", "SUMU"]
+  }
+}

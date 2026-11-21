@@ -24,7 +24,7 @@
       "notas": "Sacada de mis equipos queda afuera y espera sola con su código"
     }
   ],
-  "fecha": "2026-11-21T02:36:05Z",
+  "fecha": "2026-11-21T05:05:06Z",
   "guias": [
     {
       "id": "shn-ar",
@@ -35,6 +35,16 @@
       "sha256": "2692fd49d4a10e40c1f979d0335036ce02c14cc920b191a4cf5ae62d9f16f271",
       "firma": "MEUCIFFK70t15V6R4M0E3FBee0+wM0yKFok8njSlE3KS8gHgAiEAqYGOoRbmq1t5UqxWJNrpulNxSXZjyCVCW8xPGcS2myg=",
       "notas": "La guía del SHN"
+    },
+    {
+      "id": "inumet-uy",
+      "version": 1,
+      "nombre": "INUMET · Uruguay",
+      "archivo": "https://raw.githubusercontent.com/Francisco-Barlo/barlo-update/main/guias/inumet-uy.json",
+      "bytes": 778,
+      "sha256": "e577ed40bb9cf9939f050c92d2faccef9e5e3f7c41c67c09b0086b271600f059",
+      "firma": "MEUCIFDZzG3CPbH0W5dFgGKirZ9WWpZZnCHxhcUPVDztDCQmAiEAg+52ME3o7176V2fQegiWYyczKE8v2IjKPBp1s+3WVvg=",
+      "notas": "INUMET Uruguay: puertos, viento en grilla, aviso y METAR"
     }
   ],
   "mudanza": "https://raw.githubusercontent.com/Francisco-Barlo/barlo-update/main/ficha.json"
